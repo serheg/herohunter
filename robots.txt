@@ -1,6 +1,0 @@
-User-Agent: *
-Disallow: /
-
-
-Sitemap: http://uproku.online/sitemap.xml
-Host: uproku.online
