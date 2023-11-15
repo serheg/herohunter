@@ -162,7 +162,7 @@ setTimeout(checkFuncExist, time || 100);
 id="recorddiv666790110"
 bgimgfield="img"
 style="height:70vh; background-image:url('images/tild3265-6266-4965-b432-653432643662__-__resize__20x__footer.jpg');"
-><div class="t-cover__carrier" id="coverCarry666790110"data-content-cover-id="666790110"data-content-cover-bg="images/tild3265-6266-4965-b432-653432643662__footer.jpg"data-display-changed="true"data-content-cover-height="70vh"data-content-cover-parallax=""style="height:70vh;background-attachment:scroll; "itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild3265-6266-4965-b432-653432643662__footer.jpg"></div><div class="t-cover__filter" style="height:70vh;background-color:#000;filter:alpha(opacity:40);KHTMLOpacity:0.4;MozOpacity:0.4;opacity:0.4;"></div><div class="t698"><div class="t-container "><div class="t-width t-width_8 t698__mainblock"><div class="t-cover__wrapper t-valign_middle" style="height:70vh;"><div class="t698__mainwrapper" data-hook-content="covercontent"><div class="t698__title t-title t-title_xs" style="" field="title"><div style="font-size: 34px;" data-customstyle="yes">Оставьте заявку на<br />подбор персонала</div></div><div><form action="https://script.google.com/macros/s/AKfycbzOYqISnrjbnrmZ-4ZIyx3iPscSiWeVK_3d7KWP8BpRz5_-gPObQeJmEonEiTcvZi3Z/exec" method="post"><input type="hidden" name="formservices[]" value="3aaf6686918234c3b15aa1acb63acabb" class="js-formaction-services"><div class="js-successbox t-form__successbox t-text t-text_md" 
+><div class="t-cover__carrier" id="coverCarry666790110"data-content-cover-id="666790110"data-content-cover-bg="images/tild3265-6266-4965-b432-653432643662__footer.jpg"data-display-changed="true"data-content-cover-height="70vh"data-content-cover-parallax=""style="height:70vh;background-attachment:scroll; "itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild3265-6266-4965-b432-653432643662__footer.jpg"></div><div class="t-cover__filter" style="height:70vh;background-color:#000;filter:alpha(opacity:40);KHTMLOpacity:0.4;MozOpacity:0.4;opacity:0.4;"></div><div class="t698"><div class="t-container "><div class="t-width t-width_8 t698__mainblock"><div class="t-cover__wrapper t-valign_middle" style="height:70vh;"><div class="t698__mainwrapper" data-hook-content="covercontent"><div class="t698__title t-title t-title_xs" style="" field="title"><div style="font-size: 34px;" data-customstyle="yes">Оставьте заявку на<br />подбор персонала</div></div><div><form id="contactForm"><input type="hidden" name="formservices[]" value="3aaf6686918234c3b15aa1acb63acabb" class="js-formaction-services"><div class="js-successbox t-form__successbox t-text t-text_md" 
 aria-live="polite" 
 style="display:none;"
 ></div><!-- TODO: изменить класс на t-form__inputsbox_flex --><div class="t-form__inputsbox t-form__inputsbox_vertical-form"><div 
@@ -263,4 +263,37 @@ t_cover__setRecalculatedHeight(rec, contentHeight);
 color: #ffffff;
 }</style></div></div><!--/allrecords--><!-- Stat --><!-- Yandex.Metrika counter 94783274 --> <script type="text/javascript" data-tilda-cookie-type="analytics"> setTimeout(function(){ (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); window.mainMetrikaId = 94783274; ym(window.mainMetrikaId , "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); }, 2000);</script><noscript><div><img src="https://mc.yandex.ru/watch/94783274" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --> <script type="text/javascript">if (! window.mainTracker) { window.mainTracker = 'tilda'; }
 setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(o)[0],s=d.createElement(o),f=function(){n.parentNode.insertBefore(s,n);}; s.type = "text/javascript"; s.async = true; s.key = k; s.id = "tildastatscript"; s.src=g; if (w.opera=="[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f(); } })(document, window, '3706130fd9e4f7d1a883f84c4e1d1827','script','js/tilda-stat-1.0.min.js');
-}, 2000); </script></body></html>
+}, 2000); </script>
+<script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {};
+
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            const url = 'https://script.google.com/macros/s/AKfycbzOYqISnrjbnrmZ-4ZIyx3iPscSiWeVK_3d7KWP8BpRz5_-gPObQeJmEonEiTcvZi3Z/exec';
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then((res) => res.json())
+            .then((response) => {
+                console.log('Response from server:', response);
+                // Handle the response as needed
+            })
+            .catch((err) => {
+                console.error('Error sending data:', err);
+                // Handle errors
+            });
+        });
+    </script>
+</body></html>
